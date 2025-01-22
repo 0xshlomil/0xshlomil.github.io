@@ -43,4 +43,4 @@ Enterprises continue to trust these limited solutions, accepting zero-day attack
 
 Gödel’s findings offer a valuable perspective on the challenges of cybersecurity. Just as mathematical systems have inherent limitations, so too do software-based solutions for detecting malware. To move beyond these constraints, cybersecurity must adopt approaches that consider the limitations of logic and strive for solutions outside the current scope of software-based visibility.
 
-**Special thanks to [Yochai Greenfeld](https://cyberoosh.blogspot.com/2017/03/the-godel-proof-and-antivirus-software.html), who collaborated on this piece.**
+**Special thanks to my colleague [Yochai Greenfeld](https://cyberoosh.blogspot.com/2017/03/the-godel-proof-and-antivirus-software.html) for collaborating with me on this piece.**
