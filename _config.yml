@@ -51,6 +51,12 @@ paginate: 6
 # Permalink structure
 permalink: /:title/
 
+# Collections
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
 # Kramdown settings
 kramdown:
   input: GFM

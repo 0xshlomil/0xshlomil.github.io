@@ -35,7 +35,7 @@ In the context of cybersecurity, this limitation explains why antivirus software
 
 Zero-day attacks exploit vulnerabilities that were previously unknown, effectively operating outside the logical rules of the system. Cybersecurity platforms are unable to detect these threats because they cannot see beyond the logic of the operating system they are protecting.
 
-Many cybersecurity companies continue to offer software-level solutions that promise advanced detection. However, these solutions are inherently limited by the logical inconsistencies Gödel described, leaving them blindsided to malicious activity occurring outside their scope. 
+Many cybersecurity companies continue to offer software-level solutions that promise advanced detection. However, these solutions are inherently limited by the logical inconsistencies Gödel described, leaving them blind to malicious activity occurring outside their scope. 
 
 ### A Flawed Arms Race
 

@@ -6,6 +6,10 @@
   icon: "fab fa-twitter"
   url: "https://twitter.com/0xshlomil"
 
+- type: linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/shlomi-levin-4695a0238/"
+
 - type: rss
   icon: "fas fa-rss"
   noblank: true
