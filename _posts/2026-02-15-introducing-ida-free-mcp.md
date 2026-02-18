@@ -1,7 +1,7 @@
 ---
-layout: post
 title: 'Introducing ida-free-mcp'
-categories: [Reverse Engineering, IDA, MCP, AI]
+categories: [Reverse Engineering]
+tags: [ida, mcp, ai]
 ---
 
 How I used Claude to convert a Python IDA plugin to native C++ — because it sounded like a fun side project.

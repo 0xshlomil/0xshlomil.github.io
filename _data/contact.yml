@@ -1,0 +1,11 @@
+- type: github
+  icon: "fab fa-github"
+  url: "https://github.com/0xshlomil"
+
+- type: twitter
+  icon: "fab fa-twitter"
+  url: "https://twitter.com/0xshlomil"
+
+- type: rss
+  icon: "fas fa-rss"
+  noblank: true

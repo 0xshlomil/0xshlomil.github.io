@@ -1,102 +1,102 @@
-#
-# This file contains configuration flags to customize your site
-#
+# The Site Configuration
+# Import the theme
+theme: jekyll-theme-chirpy
 
-# Name of your site (displayed in the header)
-name: 0xshlomil
+# The language of the webpage
+lang: en
 
-# Name of the author
-author: 0xshlomil
+# Change to your timezone
+timezone: Asia/Jerusalem
 
-# Short bio or description (displayed in the header)
+# Site title
+title: 0xshlomil
+
+# Subtitle / tagline
+tagline: 0xshlomil's cyber blog
+
+# Site description (for SEO)
 description: 0xshlomil's cyber blog
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
+# Site URL
+url: "https://0xshlomil.github.io"
+
+github:
+  username: 0xshlomil
+
+twitter:
+  username: 0xshlomil
+
+social:
+  name: 0xshlomil
+  links:
+    - https://github.com/0xshlomil
+    - https://twitter.com/0xshlomil
+
+# Google Analytics
+google_analytics:
+  id: G-3L25EEXQ5F
+
+# Prefer a light theme
+theme_mode: light
+
+# Avatar image
 avatar: https://avatars.githubusercontent.com/u/2356934?v=4
 
-#
-# Flags below are optional
-#
+# Table of contents in posts
+toc: true
 
-# Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble:
-  email: 
-  facebook:
-  flickr:
-  github: 0xshlomil/0xshlomil.github.io
-  instagram:
-  linkedin: 
-  pinterest:
-  rss: rss
-  twitter: 0xshlomil
-  stackoverflow: 
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
-  playconsole:
-  mastodon: # <your-mastodon-instance>/@<your-user-name> eg. fosstodon.org/@username
+# Pagination
+paginate: 6
 
-# Enter your Disqus shortname (not your username) to enable commenting on posts
-# You can find your shortname on the Settings page of your Disqus account
-disqus: 
-
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
-
-# For newer "GA4" analytics, use the following instead of the "UA" entry above
-google_analytics_ga4: G-3L25EEXQ5F
-
-# Your website URL (e.g. http://amitmerchant1990.github.io or http://www.amitmerchant.com)
-# Used for Sitemap.xml and your RSS feed
-url: https://0xshlomil.github.io
-enforce_ssl: 
-
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-baseurl: "/"
-
-#
-# !! You don't need to change any of the configuration flags below !!
-#
-
+# Permalink structure
 permalink: /:title/
 
-# The release of Jekyll Now that you're using
-version: v1.2.0
-
-# Jekyll 3 now only supports Kramdown for Markdown
+# Kramdown settings
 kramdown:
-  # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
-  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
+    css_class: highlight
 
-# Set the Sass partials directory, as we're using @imports
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: false
+      toc: true
+      permalink: /:title/
+  - scope:
+      path: _tabs
+    values:
+      layout: page
+      permalink: /:title/
+
 sass:
-  style: :expanded # You might prefer to minify using :compressed
+  style: compressed
 
-# Use the following plug-ins
-plugins:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jekyll-seo-tag
-  - jekyll-paginate
-
-include: ['_pages']
-
-paginate: 6
-paginate_path: /page:num/
-
-# Exclude these files from your production _site
+# Build exclusions
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
   - README.md
-  - CNAME
+  - LICENSE
+  - "gulpfile.js"
+  - "node_modules"
+  - "package*.json"
 
+plugins:
+  - jekyll-seo-tag
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/

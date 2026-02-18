@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Jekyll-based cybersecurity blog (0xshlomil.github.io) using the Reverie theme, hosted on GitHub Pages.
+Jekyll-based cybersecurity blog (0xshlomil.github.io) using the Chirpy theme (`jekyll-theme-chirpy` gem), deployed via GitHub Actions to GitHub Pages.
 
 ## Build Commands
 
@@ -19,36 +19,39 @@ bundle exec jekyll serve
 bundle exec jekyll build
 ```
 
-Ruby version: 2.4.3 (see `.ruby-version`). Production builds happen automatically via GitHub Pages on push to `master`.
+Ruby version: 3.3.0 (see `.ruby-version`). Deployment is handled by GitHub Actions (`.github/workflows/pages-deploy.yml`) on push to `master`.
 
 ## Architecture
 
 - **`_posts/`** — Blog posts in Markdown. Filename format: `YYYY-MM-DD-kebab-case-title.md`
-- **`_pages/`** — Static pages (about, archive, categories, search)
-- **`_layouts/`** — Liquid templates: `default.html` (base) → `post.html` / `page.html`
-- **`_includes/`** — Reusable partials (meta tags, analytics, social icons, comments)
-- **`_sass/`** — SCSS partials; `_darcula.scss` for code syntax highlighting
-- **`assets/`** — Compiled stylesheet entry point (`style.scss`) and search JS
+- **`_tabs/`** — Navigation pages (about, archives, categories, tags) using Chirpy's tab layout
+- **`_data/contact.yml`** — Social/contact links for the sidebar
 - **`images/`** — Blog post images, organized by year subfolder
+- **`index.html`** — Homepage using Chirpy's `home` layout
+
+Layouts, includes, sass, and assets are provided by the `jekyll-theme-chirpy` gem.
 
 ## Blog Post Conventions
 
 Front matter:
 ```yaml
 ---
-layout: post
 title: 'Post Title'
-categories: [Category1, Category2]
+categories: [Category]
+tags: [tag1, tag2]
 ---
 ```
 
-Images are stored in `images/` (often in year-based subdirectories) and referenced as `/images/path/to/image.png`.
-
-Permalinks follow `/:title/` format (set in `_config.yml`).
+- No `layout:` needed (defaults to `post` via `_config.yml`)
+- Categories: max 2, broad groupings (e.g., Software Exploitation, Reverse Engineering, Miscellaneous)
+- Tags: specific topics, lowercase with hyphens (e.g., cve-2019-0539, linux-kernel)
+- Images referenced as `/images/path/to/image.png`
+- Permalinks follow `/:title/` format (set in `_config.yml`)
 
 ## Key Configuration
 
+- **Theme:** jekyll-theme-chirpy v7.4
 - **Markdown engine:** Kramdown with GFM input, Rouge syntax highlighter
-- **Plugins:** jekyll-sitemap, jekyll-feed, jekyll-seo-tag, jekyll-paginate
-- **Pagination:** 6 posts per page on the homepage
-- **Search:** Client-side via SimpleJekyllSearch (`search.json` generates the index)
+- **Plugins:** jekyll-seo-tag, jekyll-archives (categories + tags)
+- **Features:** Auto-generated ToC, dark/light mode toggle, search, code copy buttons
+- **GA4:** G-3L25EEXQ5F

@@ -1,7 +1,7 @@
 ---
-layout: post
 title: The Gödel Proof & the Malware-Detection Spoof
-categories: [Miscellaneous, History, Godel, Philosophy]
+categories: [Miscellaneous]
+tags: [history, godel, philosophy]
 ---
 
 In this post, we take inspiration from Kurt Gödel by looking at the system from an outsider’s point of view to detect malware.

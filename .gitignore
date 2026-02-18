@@ -1,13 +1,20 @@
-_site
-.DS_Store
-.jekyll
+# Dependencies
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
-.bundle
-.sass-cache
-Gemfile.lock
-node_modules
-package.json
-*.gem
-*.gemspec
-.jekyll-cache
-vendor
+vendor/
+
+# Bundler
+.bundle/
+
+# Node
+node_modules/
+
+# macOS
+.DS_Store
+
+# IDE
+*.swp
+*.swo
+*~
